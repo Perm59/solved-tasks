@@ -4,4 +4,5 @@ Tasks from Codewars
 ```javascript
 const a = 123;
 //Hello World!
+let x = 75;
 ```
