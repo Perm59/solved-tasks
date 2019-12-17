@@ -1,17 +1,6 @@
 # solved-tasks
 
-* You're a square!
+* Calculate Price Excluding VAT
 ```javascript
-const isSquare = n => Number.isInteger(Math.sqrt(n));
-```
-* Squares sequence
-```javascript
-function squares(x, n) {
-const arr = [];
-  for (let i = 0; i < n; i++){
-    arr.push(x);
-    x *= x;
-  }
-  return arr;
-}
+const excludingVatPrice = price => price === null ? -1 : +(price / 1.15).toFixed(2);
 ```
