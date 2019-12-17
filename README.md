@@ -1,27 +1,17 @@
 # solved-tasks
 
-* Binary Addition 
+* You're a square!
 ```javascript
-function addBinary(a,b) {
-  return (a+b).toString(2);
-}
+const isSquare = n => Number.isInteger(Math.sqrt(n));
 ```
-* Formatting decimal places #1
+* Squares sequence
 ```javascript
-function twoDecimalPlaces(number) {
-  return (Math.trunc(number * 100)) / 100;
-}
-```
-* How many times should I go?
-```javascript
-function howManyTimes(annualPrice, individualPrice) {
-  return Math.ceil(annualPrice / individualPrice);
-}
-```
-* Find the next perfect square!
-```javascript
-function findNextSquare(sq) {
-  let res = Math.sqrt(sq);
-  return res % 1 === 0 ? (res + 1) ** 2 : -1;
+function squares(x, n) {
+const arr = [];
+  for (let i = 0; i < n; i++){
+    arr.push(x);
+    x *= x;
+  }
+  return arr;
 }
 ```
