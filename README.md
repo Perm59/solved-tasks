@@ -1,17 +1,12 @@
 # solved-tasks
 
-* Find the divisors!
+* Sum of two lowest positive integers
 ```javascript
-function divisors(int) {
-  const arr = [];
-    for(let i = 2; i < int; i++){
-      if (int % i === 0){
-        arr.push(i);
-      } 
-    }
-    if(arr.length < 1){
-      return int + ' is prime';
-    } else { return arr;}
+function sumTwoSmallestNumbers(n) {  
+  let x = Math.min(...n);
+  let arr = n.filter((el,i) => i !== n.indexOf(x));
+  let y = Math.min(...arr);
+  return x + y;
 }
 ```
 
