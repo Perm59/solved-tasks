@@ -1,12 +1,12 @@
 # solved-tasks
 
-* Sum of two lowest positive integers
+* Remove the minimum
 ```javascript
-function sumTwoSmallestNumbers(n) {  
+function removeSmallest(n) {
   let x = Math.min(...n);
-  let arr = n.filter((el,i) => i !== n.indexOf(x));
-  let y = Math.min(...arr);
-  return x + y;
+  let arr = n.slice();
+  arr.splice(n.indexOf(x), 1);
+  return arr;
 }
 ```
 
