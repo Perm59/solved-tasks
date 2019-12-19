@@ -1,6 +1,17 @@
 # solved-tasks
 
-* Calculate Price Excluding VAT
+* Find the divisors!
 ```javascript
-const excludingVatPrice = price => price === null ? -1 : +(price / 1.15).toFixed(2);
+function divisors(int) {
+  const arr = [];
+    for(let i = 2; i < int; i++){
+      if (int % i === 0){
+        arr.push(i);
+      } 
+    }
+    if(arr.length < 1){
+      return int + ' is prime';
+    } else { return arr;}
+}
 ```
+
