@@ -1,8 +1,8 @@
 # solved-tasks
 
-* filterEvenLengthWords
+* Find how many times did a team from a given country win the Champions League?
 ```javascript
-const filterEvenLengthWords = w => w.filter(el => el.length % 2 === 0);
+const countWins = (winnerList, country) => winnerList.filter(el => el.country === country).length;
 ```
 
 
