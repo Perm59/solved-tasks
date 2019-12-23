@@ -1,23 +1,19 @@
 # solved-tasks
 
-* Array.diff
+* Unique In Order
 ```javascript
-function array_diff(a, b) {
-  const arr = [];
-    for(let i = 0; i < a.length; i++){
-      if(b.indexOf(a[i]) < 0) arr.push(a[i]);
+1.
+var uniqueInOrder=function(it){
+  let arr = [];
+  if(it.length < 1) return arr;
+  arr.push(it[0]);
+    for (let i = 1; i < it.length; i++){
+      if(it[i] !== it[i-1]) arr.push(it[i]);
     }
-    return arr;
+  return arr;
 }
-```
-* Find Duplicates
-```javascript
-const duplicates = arr =>
-arr.filter((el, i) => i !== arr.indexOf(el) && i === arr.lastIndexOf(el));
-```
-* Train to remove duplicates from an array with filter()
-```javascript
-const unique = arr => arr.filter((el, i) => i === arr.indexOf(el));
+2.
+const uniqueInOrder = iterable => [...iterable].filter((el, i) => el !== iterable[i-1]);
 ```
 
 
