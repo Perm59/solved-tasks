@@ -1,14 +1,15 @@
 # solved-tasks
 
-* Find the capitals
+* Don't give me five!
 ```javascript
-let capitals = function (w) {
-	let arr =[];
-    for (let i = 0; i < w.length; i++){
-      if(w[i] === w[i].toUpperCase()) arr.push(i);
-    }
-    return arr;
-};
+function dontGiveMeFive(start, end)
+{
+let res = 0;
+  for (let i = start; i <= end; i++){
+      if(!i.toString().includes('5')) res++;
+  }
+return res;
+}
 
 ```
 
