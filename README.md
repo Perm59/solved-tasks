@@ -1,8 +1,16 @@
 # solved-tasks
 
-* makeBackronym
+* Numbers to Objects
 ```javascript
-const makeBackronym = str => str.split('').map(el => dict[el.toUpperCase()]).join(' ');
+function numObj(s){
+  let arr = [];
+  for (let i = 0; i < s.length; i++){
+   let obj = {};
+    obj[s[i]] = String.fromCodePoint(s[i]);
+    arr.push(obj);
+  }
+    return arr;
+}
 
 ```
 
