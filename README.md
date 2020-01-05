@@ -1,17 +1,15 @@
 # solved-tasks
 
-* Numbers to Objects
+* Permute a Palindrome
 ```javascript
-function numObj(s){
-  let arr = [];
-  for (let i = 0; i < s.length; i++){
-   let obj = {};
-    obj[s[i]] = String.fromCodePoint(s[i]);
-    arr.push(obj);
+function permuteAPalindrome (inp) { 
+const obj = {};
+  for (let i = 0; i < inp.length; i++){
+    if(!obj[inp[i]]) obj[inp[i]] = 1;
+    else delete obj[inp[i]];
   }
-    return arr;
+  return Object.keys(obj).length < 2;
 }
-
 ```
 
 
