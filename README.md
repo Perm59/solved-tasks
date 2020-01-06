@@ -1,17 +1,15 @@
 # solved-tasks
 
-* What is my name score? #1
+* How many days are we represented in a foreign country?
 ```javascript
-function nameScore(name){
-  const obj = {};
-  let count = 0;
-  for (let i = 0; i < name.length; i++){
-    for (let key in alpha){
-      if(key.indexOf(name[i].toUpperCase()) !== -1) count += alpha[key];
+function daysRepresented(t){
+let arr = [];
+  for (let i = 0; i < t.length; i++){
+    for (let j = t[i][0]; j <= t[i][1]; j++){
+      if (arr.indexOf(j) === -1) arr.push(j);
     }
   }
-  obj[name] = count;
-  return obj;
+  return arr.length;
 }
 ```
 
